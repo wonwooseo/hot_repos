@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.seo.wonwo.hotrepos.com.seo.wonwo.hotrepos.Search">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/appbar_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        />
+
+    <EditText
+        android:id="@+id/search_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter repo name/language/topic..."
+        android:imeOptions="actionDone"
+        android:inputType="textPersonName"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@+id/appbar_search" />
+
+    <Button
+        android:id="@+id/search_gobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO!"
+        android:layout_below="@+id/search_editText"
+        android:layout_alignEnd="@+id/search_editText" />
+
+    <Spinner
+        android:id="@+id/search_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/searchby"
+        android:layout_toStartOf="@+id/search_gobutton"
+        android:layout_alignTop="@+id/search_gobutton" />
+
+    <TextView
+        android:id="@+id/searchby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search by: "
+        android:textSize="16sp"
+        android:layout_alignTop="@+id/search_options"
+        android:layout_alignStart="@+id/search_editText" />
+
+    <ListView
+        android:id="@+id/search_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/search_gobutton" />
+
+    <TextView
+        android:id="@+id/search_no_match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:text="Search result empty" />
+
+
+</RelativeLayout>

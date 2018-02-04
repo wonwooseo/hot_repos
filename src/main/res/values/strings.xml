@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HotRepos</string>
+    <string name="title_search">Search</string>
+    <string name="title_visualization">Visualization</string>
+    <string name="token">TOKEN here</string>
+    <string-array name="search_options">
+        <item>Repo Name</item>
+        <item>Language</item>
+        <item>Topic</item>
+    </string-array>
+</resources>
